@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         BUILD_FILE_NAME = "index.html"
+        CI = "true" 
     }
     stages {
         stage('Build') {
@@ -29,6 +30,7 @@ pipeline {
                 sh '''
                     echo "Test stage"
                     test -f build/$BUILD_FILE_NAME
+                    npm test
                 '''
             }
         }

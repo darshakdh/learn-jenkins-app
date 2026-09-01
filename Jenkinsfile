@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         BUILD_FILE_NAME = "index.html"
-        CI = "true" 
     }
     stages {
         stage('Build') {
